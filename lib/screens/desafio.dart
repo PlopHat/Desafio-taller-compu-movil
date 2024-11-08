@@ -22,7 +22,7 @@ class _PaginaDesafioState extends State<PaginaDesafio> {
 
   // Método que procesa el texto ingresado
   void _procesarTexto() {
-    _logger.i('Usuario presionó el botón Procesar');
+    //_logger.i('Usuario presionó el botón Procesar');
     String entrada = _controladorTexto.text.toLowerCase(); // evita discriminar entre mayúsculas y minúsculas (todas minúsculas)
     List<String> listaResultados = []; // Lista que almacenará cada letra y su conteo en formato "[letra][cantidad]"
     
@@ -41,12 +41,12 @@ class _PaginaDesafioState extends State<PaginaDesafio> {
     // Convertimos el conteo al formato [letra][cantidad]
     for (int i = 0; i < 26; i++) {
       if (contadorLetras[i] > 0) {
-        _logger.i(contadorLetras[i]); // está contando las letras correctamente?
+        //_logger.i(contadorLetras[i]); // está contando las letras correctamente?
         String letra = String.fromCharCode(i + 'a'.codeUnitAt(0));
         listaResultados.add('$letra${contadorLetras[i]}');
       }
     }
-
+    // No logramos mantener el orden de las letras segun aparición :S, quedará como desafío para más tarde
     setState(() {
       _resultado = listaResultados.join(''); // Une los elementos de la lista en una cadena
     });
