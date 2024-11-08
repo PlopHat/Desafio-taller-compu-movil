@@ -4,4 +4,4 @@ Desafío en clases flutter
 
 ## Getting Started
 
-En conjunto con José donoso, Diego aguirre y Dylan Díaz
+En conjunto con José Donoso, Diego Aguirre y Dylan Díaz
